@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2023-2026 The MathWorks, Inc.-->
+<rsccat version="1.0" locale="en_US" product="shared_romapp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/msgcat.xsd">
+    <message>
+        <!--THIS FILE CONTRIBUTES TO THE MATLAB APPS & PLOTS GALLERY WHICH IS CAREFULLY CURATED-->
+        <!--ADDITIONS AND CHANGES MUST GO THROUGH A DESIGN REVIEW PROCESS WITH SENIOR MANAGEMENT-->
+        <!--THIS PROCESS IS MANAGED BY THE MATLAB DESKTOP TEAM. CONSULT THE TOOLSTRIP GUIDELINES TO GET STARTED-->
+        <entry key="Tool_reducedOrderModeler_Label">Reduced Order Modeler</entry>
+        <entry key="Tool_reducedOrderModeler_Description">Create reduced order models of Simulink models or subsystems (reducedOrderModeler)</entry>
+
+        <!-- General/common strings -->
+        <entry key="errUnexpected">Unexpected error: {0}</entry>
+        <entry key="lblYes">Yes</entry>
+        <entry key="lblNo">No</entry>
+        <entry key="lblYes_lower">yes</entry>
+        <entry key="lblNo_lower">no</entry>
+        <entry key="lblCancel">Cancel</entry>
+        <entry key="lblOk">OK</entry>
+        <entry key="lblHelp">Help</entry>
+        <entry key="lblApply">Apply</entry>
+        <entry key="lblEdit">Edit</entry>
+        <entry key="lblError">Error</entry>
+        <entry key="lblEditWithEllipses">Edit...</entry>
+        <entry key="lblROM">Reduced Order Model</entry>
+        <entry key="lblFile">File</entry>
+        <entry key="lblSimulation">Experiment</entry>
+        <entry key="lblImportedData">Imported Data</entry>
+        <entry key="lblSimulate">Simulate</entry>
+        <entry key="lblCollectData">Collect Data</entry>
+        <entry key="lblModel">Create Model</entry>
+        <entry key="lblExport">Export</entry>
+        <entry key="lblExportWithEllipses">Export...</entry>
+        <entry key="lblName">Name</entry>
+        <entry key="lblResults">Results</entry>
+        <entry key="lblDelete">Delete</entry>
+        <entry key="lblDeleteAll">Delete All</entry>
+        <entry key="lblCopy">Copy</entry>
+        <entry key="lblUpdate">Update</entry>
+        <entry key="lblNewWithEllipses">New...</entry>
+        <entry key="lblUnknown">Unknown</entry>
+        <entry key="lblNone">None</entry>
+        <entry key="lblXofY">{0} of {1}</entry>
+
+        <!-- Main App strings -->
+        <entry key="errSessionFileFormat">File does not contain valid session data.</entry>
+        <entry key="lblAppName">Reduced Order Modeler</entry>
+        <entry key="msgProcessing">Processing ...</entry>
+        <entry key="lblOpenApp_SimulinkModel">Enter Simulink Model Name</entry>
+        <entry key="errOpenApp_BadModelName">The 'modelname' argument of the reducedOrderModeler command must specify the name of an open Simulink model or Simulink model that is on the path.</entry>
+        <entry key="errOpenApp_BadArgument1">The 1st argument of the reducedOrderModeler command must be the name of a simulink model, a matrix, a timetable, a datastore, a linear time invariant model (sparss, mechss, ss, tf, etc.) or a romapp session data object.</entry>
+        <entry key="errOpenApp_License">The Reduced Order Modeler App requires the System Identification and Statistics and Machine Learning Toolboxes. To create neural network based reduced order models the App requires the Deep Learning Toolbox.</entry>
+        <entry key="errOpenApp_TooManyArguments">The Reduced Order Modeler App requires at most two input arguments.</entry>
+        <entry key="errOpenApp_InconsistentSize">Input and output data must have the same number of rows.</entry>
+        <entry key="errOpenApp_InvalidData">Matrix and timetable data imported into the Reduced Order Modeler must be real finite data. Only timetable variables with scalar numeric data can be imported.</entry>
+        <entry key="errOpenApp_NoCST">Creating a reduced order model of a linear time invariant model (sparss, mechss, ss, tf, etc.) requires the Control System Toolbox.</entry>
+
+        <!-- Save/Load session strings -->
+        <entry key="msgSelectSession">Select session to open</entry>
+        <entry key="msgOpeningSession">Opening session, {0}</entry>
+        <entry key="msgOpenedSession">Session opened, {0}</entry>
+        <entry key="msgSaveSession">Save Reduced Order Modeler session?</entry>
+        <entry key="lblSaveSession">Save Session</entry>
+        <entry key="msgSavedSession">Session saved, {0}</entry>
+
+        <!-- Reduced Order Model tab strings -->
+        <entry key="lblNewSession">New\nSession</entry>
+        <entry key="ttipNewSession">New Session</entry>
+        <entry key="lblOpenSession">Open\nSession</entry>
+        <entry key="ttipOpenSession">Open Session</entry>
+        <entry key="lblSaveSessionWithLF">Save\nSession</entry>
+        <entry key="ttipSaveSession">Save Session</entry>
+        <entry key="lblIOs">IOs</entry>
+        <entry key="lblEditIO">Edit\nInputs/Outputs</entry>
+        <entry key="ttipEditIO">Change the ROM inputs, outputs, and parameters.</entry>
+        <entry key="lblNewSimulationSet">New\nExperiment</entry>
+        <entry key="lblNewSimulationSet_Description">Create an experiment to collect data from the Simulink model to use to train a ROM.</entry>
+        <entry key="lblNewLinearizationSnapshotSet">New Simulation Set using Linearization Snapshots</entry>
+        <entry key="lblNewLinearizationOPSet">New Simulation Set using Operating Points</entry>
+        <entry key="lblRunOptions_WithLF">Simulation\nOptions</entry>
+        <entry key="ttipRunOptions">Set simulation options for collecting data</entry>
+        <entry key="lblRunSimulations">Run\nSimulations</entry>
+        <entry key="ttipRunSimulations">Run simulations and collect Data</entry>
+        <entry key="lblOpenResults">Open\nResults</entry>
+        <entry key="ttipOpenResults">Plot data collected from running simulations</entry>
+        <entry key="lblROMMethods">ROM Methods</entry>
+        <entry key="lblExportToWorkspace">Export to\nWorkspace</entry>
+        <entry key="ttipExportToWorkspace">Export experiment data and result to the MATLAB workspace</entry>
+        <entry key="lblMethod_NSS">Neural State Space</entry>
+        <entry key="lblMethod_LSTM">LSTM Network</entry>
+        <entry key="lblMethod_CNN">Convolutional Neural Network</entry>
+        <entry key="lblMethod_NLARX">Nonlinear ARX</entry>
+        <entry key="lblMethod_LPV">Linear Parameter Varying</entry>
+        <entry key="lblMethod_MLP">MLP Network</entry>
+        <entry key="lblMethod_CasCor">Cascade-Correlation</entry>
+        <entry key="lblImportDataWithLF">Import\nData</entry>
+        <entry key="lblImportData_Description">Import input, output, and parameter data from the MATLAB workspace to create an experiment.</entry>
+        <entry key="lblData">Data</entry>
+
+        <!-- Data Browser strings -->
+        <entry key="lblInputsOutputs">Inputs/Outputs</entry>
+        <entry key="lblROMInput">ROM Input</entry>
+        <entry key="lblROMOutput">ROM Output</entry>
+        <entry key="lblROMParameter">ROM Parameter</entry>
+        <entry key="lblSimulationInput">Simulation Input</entry>
+        <entry key="lblSimulationParameter">Simulation Parameter</entry>
+        <entry key="lblROMAndSimulationInput">ROM &amp; Simulation Input</entry>
+        <entry key="lblLoggedOutput">Logged Output</entry>
+        <entry key="lblSimulationSets">Experiments</entry>
+        <entry key="lblNumSimulations_short"># Sims</entry>
+        <entry key="lblResultData">Data</entry>
+        <entry key="mnuOpenSelection">Open</entry>
+        <entry key="mnuPlotResults">Plot Results</entry>
+        <entry key="ttipResultsDontMatchSpec">Results marked with * are from experiment definitions that have changed.</entry>
+
+        <!-- Simulation Set tab/panel/doc strings -->
+        <entry key="lblSimulationSet">Simulation Experiment</entry>
+        <entry key="lblSimulationSnapshots">Simulation Snapshots</entry>
+        <entry key="chkCreateLinearizationSnapshots">Use Simulation Snapshot for Linearization</entry>
+        <entry key="lblSnapshotTimes">Snapshot Times</entry>
+        <entry key="lblCreateSimulationSet">Experiment Specifications</entry>
+        <entry key="chkAutoUpdateSimulationSet">Automatically update experiment</entry>
+        <entry key="lblConfigAllSignalsParameters">Configure Experiment</entry>
+        <entry key="ttipAddSignalSpec">Add</entry>
+        <entry key="ttipUpdateSignalSpec">Update</entry>
+        <entry key="ttipCopySignalSpec">Copy</entry>
+        <entry key="ttipDeleteSignalSpec">Delete</entry>
+        <entry key="lblSignalSpecification">Specification</entry>
+        <entry key="lblSignalSpecTab">Signals</entry>
+        <entry key="lblParameterSpecTab">Parameters</entry>
+        <entry key="lblBoundarySpecTab">Boundaries</entry>
+        <entry key='msgOpenSimulationSet'>Opening Simulation Set Tab</entry>
+        <entry key="ttipSimulationSet_Apply">Update the experiment with the new settings.</entry>
+        <entry key="ttipSimulationSet_Plot">Plot the signals defined in this experiment.</entry>
+        <entry key="errNoFactors">Cannot acquire signals and parameters within boundaries.</entry>
+        <entry key="errIgnoreBoundaries">Boundaries on solely chirp/custom signals are ignored.</entry>
+        <entry key="errIgnoreMethod">Cannot move binary signals, "Reject and resample" applied.</entry>
+
+        <!-- Signal spec strings -->
+        <entry key="lblSignalSpecMethod">Signal type</entry>
+        <entry key="lblInjectionMode">Signal injection mode</entry>
+        <entry key="lblInjectionMode_Add">Perturb</entry>
+        <entry key="lblInjectionMode_Replace">Replace</entry>
+        <entry key="lblPRPS_Description">Random pulses</entry>
+        <entry key="lblPRSignalSpec_PulseWidth">Pulse width</entry>
+        <entry key="lblPRSignalSpec_NumPulse">Number of pulses</entry>
+        <entry key="lblPRSignalSpec_Limits">Pulse amplitude ranges</entry>
+        <entry key="lblPRSignalSpec_SignalName">Signal</entry>
+        <entry key="lblPRSignalSpec_SignalMin">Min</entry>
+        <entry key="lblPRSignalSpec_SignalMax">Max</entry>
+        <entry key="lblPRBS_Description">Binary sequence</entry>
+        <entry key="lblPRBSSignalSpec_Order">Sequence order</entry>
+        <entry key="lblPRBSSignalSpec_Limits">Pulse amplitudes</entry>        
+        <entry key="lblPRSS_Description">Sobol sequence</entry>
+        <entry key="lblPRSSSignalSpec_Limits">Pulse amplitudes ranges</entry>
+        <entry key="lblFSCS_Description">Chirp signal</entry>
+        <entry key="lblFSCSignalSpec_Parameters">Chirp parameters for signals</entry>
+        <entry key="lblFSCSignalSpec_InitialFrequency">Initial frequency (Hz)</entry>
+        <entry key="lblFSCSignalSpec_TargetFrequency">Final frequency (Hz)</entry>
+        <entry key="lblFSCSignalSpec_InitialPhase">Initial phase (deg)</entry>
+        <entry key="lblFSCSignalSpec_SignalMin"> Minimum amplitude</entry>
+        <entry key="lblFSCSignalSpec_SignalMax"> Maximum amplitude</entry>
+        <entry key="lblFSCSignalSpec_TargetTime">Target time (sec)</entry>
+        <entry key="errFSCSignalSpec_InitialFrequency">Initial frequency must be a finite nonnegative scalar or a finite nonnegative vector of length {0, number, integer}</entry>
+        <entry key="errFSCSignalSpec_TargetFrequency">Final frequency must be a finite nonnegative scalar or a finite nonnegative vector of length {0, number, integer}</entry>
+        <entry key="errFSCSignalSpec_InitialPhase">Initial phase must be a finite real scalar or a finite real vector of length {0, number, integer}</entry>
+        <entry key="errFSCSignalSpec_SignalMin">Minimum must be a finite real scalar or a finite real vector of length {0, number, integer}</entry>
+        <entry key="errFSCSignalSpec_SignalMax">Maximum must be a finite real scalar or a finite real vector of length {0, number, integer}</entry>
+        <entry key="errFSCSignalSpec_SameFrequency">Chirp signal must have different initial and final frequency</entry>
+        <entry key="errFSCSignalSpec_TargetTime">Target time must be a finite positive scalar</entry>
+        <entry key="lblCustomSignal_Description">Custom signal</entry>
+        <entry key="lblCustomSignalSpec_TableTitle">Enter a timetable or [t,u] array for each signal</entry>
+        <entry key="lblCustomSignalSpec_Value">Custom signal</entry>
+        <entry key="errCustomSignal"> must be a valid timetable or [t,u] array</entry>
+        <entry key="errCustomSignalSize"> must contain only one variable and contain more than one point</entry>
+        <entry key="errCustomSignalData"> must contain finite real scalar data</entry>
+        <entry key="errCustomSignalTime"> must contain nonnegative real times starting from 0</entry>
+        <entry key="lblParameterSpecMethod">Method</entry>
+        <entry key="lblParameterSpecMethod_Values">Values</entry>
+        <entry key="lblParameterSpecMethod_Distribution">Distribution</entry>
+        <entry key="lblParameterSpec_Parameter">Parameter</entry>
+        <entry key="lblParameterSpec_Value">Values</entry>
+        <entry key="lblParameterSpec_Distribution">Distribution</entry>
+        <entry key="lblParameterSpec_NumSamples">Number of samples</entry>
+        <entry key="lblParameterSpec_EditDistributions">Edit Distributions...</entry>
+
+        <!-- Boundary Spec strings -->
+        <entry key="lblBoundary_RemovalMethod">Removal method</entry>
+        <entry key="lblBoundary_RejectPoint">Reject and resample</entry>
+        <entry key="lblBoundary_ProjectPoint">Move onto the feasible region</entry>
+        <entry key="lblBoundary_Factor1_twolines">Signal/\nParameter\n1</entry>
+        <entry key="lblBoundary_Factor2_twolines">Signal/\nParameter\n2</entry>
+        <entry key="lblBoundary_Factor1">Signal/Parameter 1</entry>
+        <entry key="lblBoundary_Factor2">Signal/Parameter 2</entry>
+        <entry key="lblBoundary">Boundary</entry>
+        <entry key="lblBoundary_EditBoundaries">Edit Boundaries</entry>
+        <entry key="lblBoundary_EditBoundaries_Btn">Edit Boundaries...</entry>
+        <entry key="lblBoundary_Type">Boundary type</entry>
+        <entry key="lblBoundary_Piecewiselinear">Piecewise linear</entry>
+        <entry key="lblBoundary_Elliptical">Elliptical</entry>      
+        <entry key="lblBoundary_Ineq">Boundary inequality</entry>
+        <entry key="lblBoundary_Connect">Connect first and last points.</entry>
+        <entry key="lblBoundary_Rotation">Rotation (deg)</entry>
+        <entry key="lblBoundary_Center">Center point</entry>
+        <entry key="lblBoundary_Axes">Axes lengths</entry>
+        <entry key="errBoundary_Factors">Must select different signals/parameters</entry>
+        <entry key="errBoundary_Intersect">Connecting lines cannot intersect.</entry>
+        <entry key="errBoundary_Intersect_Extended">Extended lines and connecting lines cannot intersect.</entry>
+        <entry key="errBoundary_Overlap">Points cannot have the same x-coordinates.</entry>
+        <entry key="errBoundary_Piecewiselinear_NeedPts">Need more points.</entry>        
+        <entry key="errBoundary_Conflicting">Conflicting boundaries have been detected for {0}. This change was not applied.</entry>    
+        <entry key="ttipBoundary_AddPts">Toggle to add points</entry>
+        <entry key="ttipBoundary_RmPts">Toggle to remove points</entry>
+        <entry key="ttipBoundary_Zoom">Toggle to zoom in/out</entry>
+        <entry key="ttipBoundary_Fit">Fit to view</entry>
+
+        <!-- Simulation Results Tab strings -->
+        <entry key="lblSimulationResults">Simulation Results</entry>
+        <entry key="lblSimulationResults_Result">Simulation Result</entry>
+        <entry key="lblSimulationResults_ofN">of {0}</entry>
+        <entry key="lblSimulationResults_Options">Options</entry>
+        <entry key="lblSimulationResults_OutputOnly">Show output only</entry>
+        <entry key="lblSimulationResults_ScatterPlot">Show as scatter plot</entry>
+        <entry key="lblSimulationResults_Distribution">Show output as distribution</entry>
+        <entry key="lblSimulationResults_Errors">Show simulation errors</entry>
+        <entry key="msgSimulationResults_ExcludedResultsList">Excluded when training due to errors:\n\t{0}\nManually excluded when training:\n\t{1}\nManually excluded when exporting:\n\t{2}</entry>
+        <entry key="msgSimulationResults_ExportedToWorkspace">Exported "{0}" to the workspace</entry>
+        <entry key="lblSimulationResults_ShowExcludedResults">Show Excluded Results</entry>
+        <entry key="lblSimulationResults_ExportResult">Export Result</entry>
+        <entry key="lblSimulationResults_IncludeResultN">Include result {0}...</entry>
+        <entry key="lblSimulationResults_ForTraining">When training model</entry>
+        <entry key="lblSimulationResults_WhenExporting">When exporting experiment</entry>
+
+        <!-- Simulation Results plot strings -->
+        <entry key="lblSimulationResults_TimeAxis">time (sec)</entry>
+        <entry key="lblSimulationResults_Input">Input: </entry>
+        <entry key="lblSimulationResults_Output">Output: </entry>
+        <entry key="lblResultPlot_Name">Simulation Result</entry>
+        <entry key="lblResultPlot_FigureTitle">Result: {0}</entry>
+        <entry key="lblResultPlot_Parameter">Parameter</entry>
+        <entry key="lblResultPlot_Value">Value</entry>
+        <entry key="lblResultPlot_SimulationError">Simulation Errored:</entry>
+        <entry key="lblResultPlot_Error">Error</entry>
+        <entry key="lblResultPlot_AllError">All {0} simulations errored</entry>
+
+        <!-- Experiment Manager strings -->
+        <entry key="msgCasCor_Description">Fit a Nonlinear ARX model using Cascade-Correlation Neural Network with sigmoid layer</entry>
+        <entry key="msgCasCor_Description_Long">Use data collected from the {0} model to fit a nonlinear ARX model using Cascade-Correlation Neural Network with sigmoid layer. 
+        By default, 20% of the data sets are used as test data. Edit the training function to change the percentage of data used as test data.</entry>
+        <entry key="msgCasCor_Status_Loading">Loading and preprocessing data</entry>
+        <entry key="msgCasCor_Status_Linear">Fitting linear model to initialize NLARX with Cascade-Correlation Neural Network</entry>
+        <entry key="msgCasCor_Status_Prediction">1-step ahead prediction fitting</entry>
+        <entry key="msgCasCor_Status_Simulation">Simulation fitting</entry>
+        <entry key="msgCasCor_Status_Test">Evaluating model on test data</entry>
+        <entry key="msgNLARX_Description">Fit a Nonlinear ARX model with sigmoid layer</entry>
+        <entry key="msgNLARX_Description_Long">Use data collected from the {0} model to fit a nonlinear ARX model with sigmoid layer. 
+        By default, 20% of the data sets are used as test data. Edit the training function to change the percentage of data used as test data.</entry>
+        <entry key="msgNLARX_Status_Loading">Loading and preprocessing data</entry>
+        <entry key="msgNLARX_Status_Linear">Fitting linear model to initialize NLARX</entry>
+        <entry key="msgNLARX_Status_Prediction">1-step ahead prediction fitting</entry>
+        <entry key="msgNLARX_Status_Simulation">Simulation fitting</entry>
+        <entry key="msgNLARX_Status_Test">Evaluating model on test data</entry>
+        <entry key="msgNSS_Description">Fit a Neural State-Space model.</entry>
+        <entry key="msgNSS_Description_Long">Use data collected from the {0} model to fit a neural state-space model. 
+        By default, 20% of the data sets are used as test data, and maxepochs for training is set to 1000. Edit the training function to
+        change the percentage of test data used and the maximum number of training epochs.</entry>
+        <entry key="msgNSS_Status_Loading">Loading and preprocessing data.</entry>
+        <entry key="msgNSS_Status_Train">Training NSS model using mini-batched data.</entry>
+        <entry key="msgNSS_Status_Train_Evaluate">Evaluating model fit on training data.</entry>
+        <entry key="msgNSS_Status_Test">Evaluating model fit on test data.</entry>
+        <entry key="errEM_OutputSignalConstant">The output signal {0} is a constant Simulink signal with only a single data point, need 
+        multiple data points to merge the signal with other signals.</entry>
+        <entry key="msgLSTM_Description">Fit an LSTM model.</entry>
+        <entry key="msgLSTM_Description_Long">Use data collected from the {0} model to fit an LSTM model.
+        By default, 20% of the data sets are used as test data, and maxepochs for training is set to 1000. Edit the training function to
+            change the percentage of test data used and the maximum number of training epochs.</entry>
+        <entry key="msgLSTM_Status_Loading">Loading and preprocessing data.</entry>
+        <entry key="msgLSTM_Status_MiniBatch">Creating mini-batch queue.</entry>
+        <entry key="msgLSTM_Status_Train">Training LSTM model using mini-batched data.</entry>
+        <entry key="msgLSTM_Status_Compress">Compressing network.</entry>
+        <entry key="msgLSTM_Status_Compress_FineTune">Fine tuning compressed network.</entry>
+        <entry key="msgLSTM_Status_Test">Evaluating model fit on test data.</entry>
+        <entry key="msgMLP_Description">Fit a multi-layer perceptron neural network model.</entry>
+        <entry key="msgMLP_Description_Long">Use data collected from the {0} model to fit a multi-layer perceptron neural network model.
+        By default, 20% of the data is used as test data, and maxepochs for training is set to 1000. Edit the training function to
+        change the percentage of test data used and the maximum number of training epochs.
+        </entry>
+        <entry key="msgMLP_Status_Loading">Loading and preprocessing data.</entry>
+        <entry key="msgMLP_Status_CreateNetwork">Creating MLP neural network.</entry>
+        <entry key="msgMLP_Status_Train">Training MLP using mini-batched data.</entry>
+        <entry key="msgMLP_Status_Test">Evaluating model fit on test data.</entry>
+        <entry key="msgEMPlot_TestData">Test Data Plot</entry>
+        <entry key="msgEMPlot_TrainingData">Training Data Plot</entry>
+        <entry key="msgEMPlot_Actual">Actual</entry>
+        <entry key="msgEMPlot_Predicted">Predicted</entry>
+        <entry key="msgEMPlot_PredictionError">prediction error</entry>        
+        <entry key="lblMethod_ScatteredInterp">Scattered Interpolant</entry>
+        <entry key="msgScatteredInterp_Description">Fit a scattered interpolant model.</entry>
+        <entry key="msgScatteredInterp_Description_Long">Use data collected from the {0} model to interpolate. 
+            By default, the data has been split for training and test according to previous selection.
+            Edit the training function to change the data used for training and test.</entry>
+        <entry key="msgScatteredInterp_Status_Loading">Loading.</entry>
+        <entry key="lblMethod_GriddedInterp">Gridded Interpolant</entry>
+        <entry key="msgGriddedInterp_Description">Fit a gridded interpolant model.</entry>
+        <entry key="msgGriddedInterp_Description_Long">Use data collected from the {0} model to interpolate. 
+            By default, the data has been split for training and test according to previous selection.
+            Edit the training function to change the data used for training and test.</entry>
+        <entry key="msgGriddedInterp_Status_Loading">Loading.</entry>
+        <entry key="lblMethod_DynamicQuickStart">Trial All</entry>
+        <entry key="msgDynamicQuickStart_Description">Fit different ROM model types to a small portion of the collected data to 
+            get an indication of the right model structure to use.</entry>
+        <entry key="msgDynamicQuickStart_Description_Long">Use data collected from the {0} model to 
+            fit different ROM model types. This will provide a good indication of the right model structure to use. 
+            Best practice is to follow up this experiment with training for the 
+            best model structure and varying hyper parameters for that model.</entry>
+        <entry key="lblMethod_StaticQuickStart">Run All</entry>
+        <entry key="msgStaticQuickStart_Description">Fit different ROM models to a small portion of the collected data to 
+            get an indication of the right model structure to use.</entry>
+        <entry key="msgStaticQuickStart_Description_Long">Use data collected from the {0} model to 
+            fit different ROM model types. By default, 20% of the data sets are used as test data. 
+            This experiment will provide a good indication of the right model structure to use 
+            for your problem. Best practice is to follow up this experiment with training for the 
+            best model structure and varying hyper parameters for that model.</entry>
+        <entry key="errEMQuickStart_InvalidModel">{0} is an unknown model type and will be ignored.</entry>
+
+        <!-- Export Results Dialog -->
+        <entry key="lblExportResults">Export Results</entry>
+        <entry key="lblExportResults_Workspace_Description">Export the selected experiment results to the MATLAB workspace</entry>
+        <entry key="lblExportResults_EM_Description">Create an Experiment Manager project to fit a {0} model using the selected experiment results.</entry>
+        <entry key="errExportResults_EM_License">The {0} method requires Toolbox licenses: {1}.</entry>
+        <entry key="lblExportResults_Export">Export</entry>
+        <entry key="lblExportResults_Result">Result</entry>
+        <entry key="lblExportResults_Training">Select for training. The rest will be used for test.</entry>
+        <entry key="errExportResults_NoSelection">Must select one experiment for training.</entry>
+        <entry key="errExportResults_GriddedSelection">Select one experiment with gridded parameters, and there must be at least two points in each dimension.</entry>
+        <entry key="msgExportResults_Workspace_Exported">Exported results to MATLAB</entry>
+        <entry key="msgExportResults_EM_Exported">Exported results to Experiment Manager</entry>
+        <entry key="errExportResults_NoResults">There are no simulation results to export as all simulations errored or were unselected. Modify the experiment definitions to generate valid simulation results.</entry>
+        <entry key="errExportResults_FewResults">There are not enough unique and non-collinear points for scattered interpolation. Select or run more experiments.</entry>
+        <entry key="msgExportResults_ExcludedByError">{0} excluded due to errors</entry>
+        <entry key="msgExportResults_ExcludedBySelection">{0} excluded by manual selection</entry>
+        <entry key="errExportResults_AllUnselected">There are no simulation results to export as all simulations were unselected. Select at least one result on the Simulation Results tab to proceed.</entry>
+        <entry key="lblExportResults_EM_SelectIODescription">Select ROM input signals and output signals to use for model training</entry>
+        <entry key="lblExportResults_EM_IOType">ROM I/O Type</entry>
+        <entry key="lblExportResults_EM_Signal">Signal</entry>
+        <entry key="errExportResults_InvalidInputSelection">Must select at least one input signal.</entry>
+        <entry key="errExportResults_InvalidOutputSelection">Must select at least one output signal.</entry>
+        <entry key="warnExportResults_UnselectedInputs">Unselected inputs may still implicitly impact ROM model training.</entry>
+        
+        <!-- Simulation Progress Dialog -->
+        <entry key="lblSimProgressDialog_Title">Please Wait</entry>
+        <entry key="msgSimProgressDialog">Running simulations and collecting data...</entry>
+
+        <!-- Run Options Dialog -->
+        <entry key="lblRunOptions">Run Options</entry>
+        <entry key="lblRunOptions_Logging">Logging</entry>
+        <entry key="lblRunOptions_LogAll">Include all signal logging specified in the Simulink model</entry>
+        <entry key="lblRunOptions_LogROMOnly">Only log reduced order model inputs and outputs</entry>
+        <entry key="lblRunOptions_LogStates">Log Simulink Model States</entry>
+        <entry key="lblRunOptions_LogToFile">Log simulation results to file</entry>
+        <entry key="lblRunOptions_LogFileLocation">File location</entry>
+        <entry key="lblRunOptions_BrowseFileLocation">Browse...</entry>
+        <entry key="lblRunOptions_BrowseInstruction">Select folder to log results to</entry>
+        <entry key="errRunOptions_BrowseLocation">Folder does not exist</entry>
+        <entry key="lblRunOptions_SimulationExecution">Simulation</entry>
+        <entry key="lblRunOptions_UseParallel">Use parallel when running multiple simulations</entry>
+        <entry key="lblRunOptions_TransferBaseWorkspaceVariables">Transfer base workspace variables to workers when using parallel</entry>
+        <entry key="lblRunOptions_ClearLogPostSim">When using a transform output function do not log un-transformed outputs</entry>
+        
+        <entry key="errRun_NonScalarSignal">The signal ''{0}'' is non scalar and can not be used as a ROM or Simulation signal.</entry>
+        <entry key="errRun_NonDoubleSignal">The signal ''{0}'' is non double and can not be used as a ROM or Simulation signal.</entry>
+        <entry key="errRun_ComplexSignal">The signal ''{0}'' is complex and can not be used as a ROM or Simulation signal.</entry>
+        <entry key="errRun_TriggeredSignal">The signal ''{0}'' has a triggered sample time and can not be used as a ROM or Simulation signal.</entry>
+        <entry key="errRun_SimulationErrorTitle">Simulation Error</entry>
+        <entry key="errRun_OptionsParallelPoolClosed">The "UseParallel" option is set to 'true' but there are no MATLAB workers available. Verify that a MATLAB pool is open and you are performing optimization on a MATLAB client. See parpool for more information.</entry>
+        <entry key="errRun_NoSimulations">There are no simulations to run. Make sure there is at least one experiment selected.</entry>
+        <entry key="errRun_NoWritePerm">The current working folder does not have write permissions. Please change the current folder to a writable directory and rerun the simulation.</entry>
+        <entry key="errRun_ParallelDirtyModel">The following model(s) must be saved before running the model using parallel computing: {0}</entry>
+        <entry key="errRun_InfSampleTime">The signal ''{0}'' has an Inf sample time and can not be used as a ROM or Simulation signal.</entry>
+        <entry key="errRun_FastRestart">The Reduced Order Modeler cannot run experiments and perform signal injection and logging when the model in fast restart. Disable fast restart before running the model to collect data.</entry>
+
+        <!-- Select IO Dialog -->
+        <entry key="lblSelectIO">Select ROM I/Os</entry>
+        <entry key="lblSelectIO_Signals">Select Signals</entry>
+        <entry key="msgSelectIO_Signals">Click signals in the Simulink model to add/remove them and set their I/O type</entry>
+        <entry key="lblSelectIO_Signal">Signal</entry>
+        <entry key="lblSelectIO_Type">I/O Type</entry>
+        <entry key="lblSelectIO_Parameters">Select Parameters</entry>
+        <entry key="msgSelectIO_Parameters">Click blocks in the Simulink model to add/remove block parameters</entry>
+        <entry key="lblSelectIO_Parameter">Parameter</entry>
+        <entry key="lblSelectIO_BlockPath">Block Path</entry>
+        <entry key="msgSelectIO_ExistingIOs">New I/Os selected. Changing the IOs will delete existing simulation sets.</entry>
+        <entry key="lblSelectIO_ExistingIOs">Select ROM I/Os</entry>
+        <entry key="ttipSelectIO_Signal_Heading">Configure signals as ROM inputs and outputs:\n</entry>
+        <entry key="ttipSelectIO_ROMInput">ROM Input - a ROM input port</entry>
+        <entry key="ttipSelectIO_ROMOutput">ROM Output - a ROM output port</entry>
+        <entry key="ttipSelectIO_SimulationInput">Simulation Input - signal to replace or perturb when\nsimulating the model to collect data for ROM fitting.</entry>
+        <entry key="ttipSelectIO_Parameter_Heading">Model parameters to include as ROM inputs</entry>
+        <entry key="errSelectIO_NoOutput">Must select at least one ROM output.</entry>
+        <entry key="errSelectIO_NoSimulationInput">Must select at least one simulation input.</entry>
+        <entry key="errSelectIO_BadStaticModel">ROMs with scalar outputs can only have parameter inputs.</entry>
+        <entry key="errSelectIO_NoTransformFcn">Must specify a valid function to transform output.</entry>
+        <entry key="lblTransformOutputSignal">Transform ROM output signal</entry>
+        <entry key="lblTransformOutputSignal_Function">Transform Output Function</entry>
+        <entry key="lblTransformOutputSignal_LogFinal">Only log final values</entry>
+        <entry key="lblTransformOutputSignal_FinalValue">Final Value</entry>
+        <entry key="lblTransformOutputSignal_UseFunction">Use function to transform</entry>
+        <entry key="lblTransformOutputSignal_Browse">Browse...</entry>
+        <entry key="lblTransformOutputSignal_BrowseInstructions">Select function to apply</entry>
+        <entry key="errTransformOutputSignal_BrowseFunction">Cannot find the selected function, check that the function is on the MATLAB path.</entry>
+        <entry key="lblTransformOutputSignal_New">New...</entry>
+        <entry key="lblTransformOutputSignal_New_L2">Signal energy.</entry>
+        <entry key="lblTransformOutputSignal_New_L1">Signal maximum absolute value.</entry>
+        <entry key="lblTransformOutputSignal_New_Min">Signal minimum value.</entry>
+        <entry key="lblTransformOutputSignal_New_Max">Signal maximum value</entry>
+        <entry key="lblTransformOutputSignal_New_Mean">Signal mean value</entry>
+        <entry key="lblTransformOutputSignal_New_Custom">Custom function</entry>
+        <entry key="lblTransformOutputSignal_Test">Test</entry>
+        <entry key="errTransformTest">Transform function error</entry>
+        <entry key="errTransformTest_Values">Expect the field values of the transform output signal function ''{0}'' to be either a scalar numeric value
+        or a timetable with the same time points as the signals in the experiment passed to the function and 'Time' and 'Data' timetable variables.</entry>
+        <entry key="errTransformTest_Struct">Expect the return argument of the transform output signal function ''{0}'' to be a struct with numeric scalar or 
+            timetable fields.</entry>
+        <entry key="errTransformTest_NoLog">There are no output signals to transform. You must select output signals when using a transform output function.</entry>
+        <entry key="lblTransform_Output_Success">Transform Output Signal</entry>
+        <entry key="lblTransform_Output_Summary">The transform function {0} computes the following:</entry>
+        <entry key="lblTransform_OutputType_Signal"> - {0} a signal.</entry>
+        <entry key="lblTransform_OutputType_Scalar"> - {0} a scalar.</entry>
+
+        <!-- Post Simulation Function selection dialog-->
+        <entry key="lblPostSimFcnDlg_Title">Post Simulation Function Templates</entry>
+        <entry key="lblPostSimFcnDlg_Label">Select a post simulation function template to use</entry>
+        <entry key="lblPostSimFcnDlg_L2">Signal energy</entry>
+        <entry key="lblPostSimFcnDlg_Linf">Signal maximum absolute value</entry>
+        <entry key="lblPostSimFcnDlg_Min">Signal minimum value</entry>
+        <entry key="lblPostSimFcnDlg_Max">Signal maximum value</entry>
+        <entry key="lblPostSimFcnDlg_Mean">Signal mean value</entry>
+        <entry key="lblPostSimFcnDlg_STD">Signal standard deviation</entry>
+        <entry key="lblPostSimFcnDlg_FinalValue">Signal final value</entry>
+        <entry key="lblPostSimFcnDlg_Custom">Custom function</entry>
+        
+        <!-- Simulation Spec plot strings -->
+        <entry key="lblSimulationSpecPlot_Title">{0} Signals</entry>
+        <entry key="lblSimulationSpecPlot_Name">Simulation Signals</entry>
+        <entry key="lblSimulationSpecPlot_TimeAxis">time (sec)</entry>
+        <entry key="lblSimulationSpecPlot_SimulationAxis">simulation</entry>
+
+        <!-- Edit distributions dialog -->
+        <entry key="lblEditDistributions">Edit Distributions</entry>
+        <entry key="lblEditDistributions_DistributionParameters">Distribution Parameters</entry>
+        <entry key="lblEditDistributions_Correlation">Correlation</entry>
+        <entry key="lblEditDistributions_SampleMethod">Sampling Method</entry>
+        <entry key="lblEditDistributions_SampleMethod_Random">Random</entry>
+        <entry key="lblEditDistributions_SampleMethod_LHS">Latin Hypercube</entry>
+        <entry key="lblEditDistributions_SampleMethod_Sobol">Sobol</entry>
+        <entry key="lblEditDistributions_SampleMethod_Halton">Halton</entry>
+        <entry key="lblEditDistributions_SampleMethod_Copula">Copula</entry>
+        <entry key="lblEditDistributions_DistributionsTable_Parameter">Parameter</entry>
+        <entry key="lblEditDistributions_DistributionsTable_Distribution">Distribution</entry>
+        <entry key="lblEditDistributions_DistributionsTable_CrossCorrelated">Cross Correlated</entry>
+        <entry key="lblEditDistributions_DistributionsTable_CrossCorrelatedLF">Cross\nCorrelated</entry>
+        <entry key="lblEditDistributions_DistributionDetail_Type">Distribution</entry>
+        <entry key="lblEditDistributions_CorrelationMatrixMsgNoParameters">No parameters selected for cross-correlation. To select parameters, click "Cross Correlated" in the distribution table.</entry>
+        <entry key="lblEditDistributions_CorrelationMatrixRevert">Scalar real values between -1 and 1 inclusive are required for off-diagonal entries in the correlation matrix.  Reverting to previous value.</entry>
+        <entry key="lblEditDistributions_QRSampleOptions_Skip">Skip</entry>
+        <entry key="lblEditDistributions_QRSampleOptions_Leap">Leap</entry>
+        <entry key="lblEditDistributions_QRSampleOptions_Scramble">Scramble</entry>
+        <entry key="lblEditDistributions_QRSampleOptions_PointOrder">PointOrder</entry>
+        <entry key="lblEditDistributions_QRScrambleOptions_None">None</entry>
+        <entry key="lblEditDistributions_QRScrambleOptions_MatousekOwen">Matousek Owen</entry>
+        <entry key="lblEditDistributions_QRScrambleOptions_RR2">RR2</entry>
+        <entry key="lblEditDistributions_QRPointOptions_Standard">Standard</entry>
+        <entry key="lblEditDistributions_QRPointOptions_Gray">Gray code</entry>
+        <entry key="lblEditDistributions_CopulaOptions_Family">Family</entry>
+        <entry key="lblEditDistributions_CopulaFamilyOptions_Gaussian">Gaussian</entry>
+        <entry key="lblEditDistributions_CopulaFamilyOptions_t">t</entry>
+        <entry key="lblEditDistributions_CopulaOptions_Type">Type</entry>
+        <entry key="lblEditDistributions_CopulaTypeOptions_Spearman">Spearman</entry>
+        <entry key="lblEditDistributions_CopulaTypeOptions_Kendall">Kendall</entry>
+        <entry key="lblEditDistributions_CopulaOptions_DOF">Degrees of Freedom</entry>
+        <entry key="errEditDistributions_InvalidDistributionParameterValue">Probability distribution parameter must be numeric scalar or vector, and cannot be empty or NaN.</entry>
+        <entry key="errEditDistributions_RevertDistributionParameterValue">Reverting to previous value.</entry>
+        <entry key="errEditDistributions_InvalidEntry">Invalid Entry</entry>
+        <entry key="lblEditDistributions_PiecewiseLinear_NumPoints"># points</entry>
+
+        <!-- Overview plot -->
+        <entry key="lblOverview_Name">Overview</entry>
+
+        <!-- Addon -->
+        <entry key="msgAddOn_Description">Create reduced order models of Simulink models or subsystems, including subsystems 
+            that integrate high-fidelity 3rd party tools. Design experiments to simulate a Simulink
+            model and collect data to train a reduced order model. You can also create ROMs using existing time-domain data. 
+            Train nonlinear ARX, neural state-space, LSTM, Multi-Layer Perceptron, and Interpolation models.</entry>
+        <entry key="msgAddOn_Summary">Create reduced order models of Simulink models or subsystems, including subsystems 
+            that integrate high-fidelity 3rd party tools.</entry>
+
+        <!-- Import Data dialog -->
+        <entry key="lblImportData">Import Data</entry>
+        <entry key="lblImportData_DataToImport">Data to import</entry>
+        <entry key="lblImportData_Add">Add</entry>
+        <entry key="lblImportData_AddData">Add Data</entry>
+        <entry key="lblImportData_Name">Name</entry>
+        <entry key="lblImportData_Type">Type</entry>
+        <entry key="lblImportData_Data">Data</entry>
+        <entry key="lblImportData_ScalarDescription">{0} is a numeric scalar.</entry>
+        <entry key="lblImportData_Cell_ScalarDescription">{0} is a {1}x{2} cell array with each element a numeric scalar.</entry>
+        <entry key="lblImportData_VectorDescription">{0} is a {1}x{2} numeric vector.</entry>
+        <entry key="lblImportData_Cell_VectorDescription">{0} is a {1}x{2} cell array with the first element a {3}x{4} numeric vector.</entry>
+        <entry key="lblImportData_MatrixDescription">{0} is a {1}x{2} numeric matrix.</entry>
+        <entry key="lblImportData_Cell_MatrixDescription">{0} is a {1}x{2} cell array with the first element a {3}x{4} numeric matrix.</entry>
+        <entry key="lblImportData_TimeTableDescription">{0} is a timetable with {1} variables and {2} time points.</entry>
+        <entry key="lblImportData_Cell_TimeTableDescription">{0} is a {1}x{2} cell array with each element a timetable with {3} variables.</entry>
+        <entry key="lblImportData_DatastoreDescription">{0} is a {1} object.</entry>
+        <entry key="lblImportData_Delete">Delete row(s)</entry>
+        <entry key="lblImportData_SetInput">Set Type to Input</entry>
+        <entry key="lblImportData_SetOutput">Set Type to Output</entry>
+        <entry key="lblImportData_SetParameter">Set Type to Parameter</entry>
+        <entry key="lblImportData_TimeImplicit">Time is implicit</entry>
+        <entry key="lblImportData_SampleTime">Sample time</entry>
+        <entry key="lblImportData_Import">Import</entry>
+        <entry key="errImportData_NoOutput">There must be at least one output to import data.</entry>
+        <entry key="errImportData_NoTime">Time must be specified either implicitly or by importing a single time vector.</entry>
+        <entry key="errImportData_UniqueNames">Names assigned to the data being imported must be unique.</entry>
+        <entry key="errImportData_NumPoints">Input, output, and time data must have the same number of points. {0} has {1} points, expected {2} points.</entry>
+        <entry key="errImportData_Cell_DifferentNumElements">The {0} and {1} cell arrays have different number of elements. When Importing from multiple cell 
+            arrays the arrays must have the same number of elements.</entry>
+        <entry key="msgImportData_DataSummaryWithParameter_Single">Importing data with {0} input(s), {1} output(s), {2} parameter(s), and {3} time points.</entry>
+        <entry key="msgImportData_DataSummaryNoParameter_Single">Importing data with {0} input(s), {1} output(s), and {2} time points.</entry>
+        <entry key="msgImportData_DataSummaryWithParameter_Multiple">Importing {0} data sets with {1} input(s), {2} output(s), and {3} parameters.</entry>
+        <entry key="msgImportData_DataSummaryNoParameter_Multiple">Importing {0} data sets with {1} input(s), and {2} output(s).</entry>
+        <entry key="msgImportData_DataSummary_Datastore">Importing a datastore with {0} input(s) and {1} output(s).</entry>
+        <entry key="lblImportData_Input">Input</entry>
+        <entry key="lblImportData_Output">Output</entry>
+        <entry key="lblImportData_Parameter">Parameter</entry>
+        <entry key="lblImportData_Time">Time</entry>
+        <entry key="lblImportData_TimeAlongColumns">By Rows</entry> <!-- Independent variable along columns</entry> -->
+        <entry key="lblImportData_TimeAlongRows">By Columns</entry> <!-- Independent variable along rows</entry> -->
+        <entry key="lblImportData_IsTimeAlongColumns">The data being added has more columns than rows. How should the data be imported?</entry>
+        <entry key="errImportData_ScalarParameter">Parameters must be scalar values. The {0} parameter has {1} elements.</entry>
+        <entry key="lblImportData_AddTime">Add Ti me</entry>
+        <entry key="errImportData_DeleteIOs">Cannot delete input/outputs/parameters.</entry>
+        <entry key="errImportData_NoData">{0} is missing data, all data must be specified before importing.</entry>
+        <entry key="errImportData_MixSingleAndMultiDatasets">Cannot import {0} as it specifies multiple datasets but the other imports are for a single dataset.</entry>
+        <entry key="errInvalidDatastore">The provided datastore is not valid. All read operations must return data in the same format.</entry>
+
+        <!-- Choose launch mode dialog -->
+        <entry key="lblChooseMode_ChooseOption">Create a Reduced Order Model from:</entry>
+        <entry key="lblChooseMode_Option_Model">Simulink Model</entry>
+        <entry key="lblChooseMode_Option_Variable">MATLAB Variable</entry>
+        <entry key="lblChooseMode_ModelName">Model Name</entry>
+        <entry key="lblChooseMode_Variable">Workspace Variable</entry>
+    
+        <!-- Performance Plot -->
+        <entry key="lblPerformancePlot_Actual">Actual</entry>
+        <entry key="lblPerformancePlot_Predicted">Predicted</entry>
+        <entry key="lblPerformancePlot_PredictionError">Prediction Error</entry>
+
+        <!-- Response Plot -->
+        <entry key="lblResponsePlot_Time">Time</entry>
+        <entry key="lblResponsePlot_Signal">Signal</entry>
+        <entry key="lblResponsePlot_Actual">Actual</entry>
+        <entry key="lblResponsePlot_Predicted">Predicted</entry>
+        <entry key="lblResponsePlot_ActualMinusPredicted">Actual minus Predicted</entry>
+        <entry key="lblResponsePlot_PredictionError">Prediction error</entry>
+
+        <!-- Export to Simulink -->
+        <entry key="lblExportToSimulinkTitle">Generate ROM Simulink Block</entry>
+        <entry key="lblExportToSimulinkDesc">Select a model to create a Simulink block</entry>
+        <entry key="errEMQuickStart_InvalidModel_ForSimulink">{0} is not supported for Simulink block generation.</entry>
+        <entry key="errRun_NoWritePerm_ExportToSL">The current working folder does not have write permissions. Please change the current folder to a writable directory and try again.</entry>
+        <entry key="warnGriddedInterpROMBlockExtrap">Due to Simulink block limitations, the extrapolation method has been \nautomatically set to 'Clip' when the interpolation method is 'nearest'.</entry>
+        <entry key="warnGriddedInterpROMBlockInterp">Due to Simulink block limitations, the interpolation method has been \nautomatically set to 'Cubic Spline' when the extrapolation method is 'spline'.</entry>
+        <entry key="descROMBlock">This block requires workspace variable {0} loaded from {1}.</entry>
+        <entry key="errUnsupportedGriddedMethods">The selected interpolation or extrapolation method is not supported for Simulink block generation. Supported methods are linear, nearest, cubic, and spline.</entry>
+    </message>
+</rsccat>
+
+<!-- LocalWords:  LSTM Sobol Halton Matousek NSS IOs parpool modelname maxepochs Addon MLP sparss
+     LocalWords:  perceptron Interpolant interpolant mechs -->

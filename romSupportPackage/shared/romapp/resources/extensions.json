@@ -1,0 +1,16 @@
+{
+  "mw": {
+    "addons": {
+      "identifier": "ROM",
+      "previewImage": "ROMPreviewImage.png",
+      "setup": "",
+      "gettingStarted": {
+        "gettingStartedInput": "ROM"
+      },
+      "provider": {
+        "name": "MathWorks",
+        "icon": "matlabLogoUI"
+      }
+    }
+  }
+}
